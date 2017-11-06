@@ -1,4 +1,5 @@
 import Html exposing (..) 
+import Post exposing (..)
 
 main = 
   Html.program 
@@ -10,15 +11,8 @@ main =
 
 -- MODEL
 
-type alias Post =
-  { id : Int
-  , title : String
-  , body : String
-  , user : String
-  }
-
 type alias Model = 
-  { posts : List Post }
+  { posts : List Post.Post }
 
 init : (Model, Cmd msg)
 init =
